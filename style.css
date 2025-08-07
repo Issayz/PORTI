@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #111;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* NAVBAR FIXA */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #000;
+  width: 100%;
+  height: 9vh;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+main, .content, .principal, section:first-of-type {
+  padding-top: 20vh; /* mesmo valor da altura da navbar */
+}
+
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo / nome*/
+.logo {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #6a027e;
+  text-shadow: 0 0 10px #6a027e;
+}
+
+/* Menu links */
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.links a {
+  color: #ededed;
+  font-size: 1.2rem;
+  font-weight: 550;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.links a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  background: #6a027e;
+  transition: 0.2s ease;
+}
+
+.links a:hover::before {
+  width: 100%;
+}
+
+.links a:hover {
+  color: #6a027e;
+}
+
+/* Ícone do menu hamburguer (mobile) */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  color: #ededed;
+  font-size: 1.8rem;
+}
+
+/* Dropdown menu mobile */
+.dropdown {
+  display: none;
+  flex-direction: column;
+  background-color: #000;
+  position: fixed;
+  top: 10vh; 
+  right: 0;
+  width: 200px;
+  padding: 1rem;
+  box-shadow: 0 0 10px #6a027e;
+  z-index: 9999;
+}
+
+.dropdown a {
+  color: #ededed;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #6a027e;
+  transition: color 0.3s ease;
+}
+
+.dropdown a:hover {
+  color: #6a027e;
+}
+
+.dropdown i.fa-xmark {
+  align-self: flex-end;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #6a027e;
+}
+
+/* Mostrar menu hamburguer e esconder links desktop no mobile */
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* CONTEÚDO PRINCIPAL */
+.main-container {
+  margin-top: 10vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 4rem;
+  gap: 4rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+
+/* FOTO REDONDA COM POPUP */
+.image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 20px #6a027e;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; 
+  display: block;
+  border-radius: 50%; 
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+
+/* TEXTO LADO DIREITO */
+.content {
+  max-width: 600px;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.content h1 span {
+  color: #6a027e;
+  text-shadow: 0 0 10px #6a027e;
+}
+
+/* TYPEWRITER com animação */
+
+.roxo {
+  color: #6a027e;
+  text-shadow: 0 0 10px #6a027e;
+}
+
+/* Cursor piscando */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* ÍCONES ALINHADOS EM LINHA, COM HOVER */
+.icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+  justify-content: flex-start;
+}
+
+.social-links a {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  transform: scale(1.1);
+  box-shadow: 0 0 50px 2px #6a027e; 
+}
+
+
+
+/* RESPONSIVO SIMPLES */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .typewriter {
+    font-size: 1.4rem;
+  }
+}
+
+#sobre {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #1a1a1a, #4b0082);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#sobre.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#sobre h2 {
+  font-size: clamp(2rem, 1rem + 3vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+#sobre p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #111; /* fundo escuro para todo o site */
+  color: #fff;
+}
+
+.section {
+  height: 100vh; /* cada seção ocupa a tela inteira */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: #111; /* mantém fundo escuro em todas as seções */
+}
+
+#inicio {
+  text-align: center;
+}
+
+#inicio h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#inicio p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #111; /* FUNDO ESCURO GLOBAL */
+  color: #fff;
+}
+
+#sobre .left img {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+#sobre .right {
+  max-width: 600px;
+}
+
+#sobre .topic {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #a66eff;
+}
+
+#sobre p {
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* animação ao aparecer */
+#sobre {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#sobre.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* custom scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111; /* fundo escuro igual o body */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6a027e;  /* roxo */
+  border-radius: 12px;
+}
