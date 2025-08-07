@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+=======
+/*Google Font CDN link*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+>>>>>>> 77e980c56197120a1c268c0f4976616c857bed33
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+<<<<<<< HEAD
 }
 
 body {
@@ -377,4 +383,28 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #6a027e;  /* roxo */
   border-radius: 12px;
+=======
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+
+::::-webkit-scrollbar-thumb {
+    background: #6a027e;
+    border-radius: 12px;
+  }
+>>>>>>> 77e980c56197120a1c268c0f4976616c857bed33
 }
