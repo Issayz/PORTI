@@ -378,3 +378,14 @@ body {
   background: #6a027e;  /* roxo */
   border-radius: 12px;
 }
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
