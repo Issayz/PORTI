@@ -174,9 +174,10 @@ main, .content, .principal, section:first-of-type {
   height: 300px;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 0 20px #6a027e;
+  box-shadow: 0 0 40px #6a027e;
   transition: transform 0.3s ease;
   flex-shrink: 0;
+  margin-top: 85px;
 }
 
 .image img {
@@ -327,6 +328,7 @@ main, .content, .principal, section:first-of-type {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1s ease, transform 1s ease;
+  padding-top: 90%;
 }
 
 #sobre.visible {
