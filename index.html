@@ -5,18 +5,16 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfólio Raissa</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/yourkitcode.js" crossorigin="anonymous"></script>
+  
   <script src="script.js" defer></script>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>issayzly07 | Portfólio</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/yourkitcode.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="script.js" defer></script>
 
 </head>
 
@@ -236,53 +234,107 @@
 </section>
 
 <!-- Contato -->
-<section class="section" id="Contato">
-  <div class="container">
-    <div class="title"><span>Contato</span></div>
+<section id="Contato">
+<section id="contato" class="contato">
+  <h2>Fale comigo!</h2>
+  <hr>
+
+  <div class="info-contato">
+    <div class="linha">
+      <i class="fas fa-envelope"></i>
+      <span>issayzly07@gmail.com</span>
     </div>
-    <form onsubmit="enviarWhatsApp(); return false;">
-      <label>Nome:</label><br />
-      <input type="text" id="nome" required /><br /><br />
-      <label>Mensagem:</label><br />
-      <textarea id="mensagem" required></textarea><br /><br />
-      <button type="submit">Enviar WhatsApp</button>
-    </form>
+    <div class="linha">
+      <i class="fas fa-phone"></i>
+      <span>+55 19 99255-0236</span>
+    </div>
+    <div class="linha">
+      <i class="fab fa-whatsapp"></i>
+      <a href="https://wa.me/5519992550236" target="_blank">WhatsApp</a>
+    </div>
   </div>
+
+  <form class="form-contato">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" required></textarea>
+
+    <button type="button" onclick="enviarWhatsApp()">Enviar WhatsApp</button>
+  </form>
 </section>
+
 
 <!-- Footer -->
 <footer>
-  <div class="container" style="display: flex; flex-direction: column; align-items: center;">
-    <div class="footer-links" style="display: flex; gap: 15px;">
-      <a href="https://github.com/Issayz" target="_blank"><img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/270px-GitHub_Invertocat_Logo.svg.png"
-          alt="GitHub" style="width:24px; height:24px;"></a>
-      <a href="https://www.linkedin.com/in/raissa-caetano-649100370" target="_blank"><img
-          src="https://cdn-icons-png.flaticon.com/512/49/49408.png" alt="linkedin" style="width:24px; height:24px;"></a>
-      <a href="https://discord.com/users/Issayz" target="_blank"><img
-          src="https://icon-library.com/images/discord-desktop-icon/discord-desktop-icon-6.jpg" alt="Discord"
-          style="width:24px; height:24px;"></a>
-      <a href="https://www.instagram.com/issayzly07" target="_blank"><img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CIS-A2K_Instagram_Icon_%28Black%29.svg/500px-CIS-A2K_Instagram_Icon_%28Black%29.svg.png"
-          alt="Instagram" style="width:24px; height:24px;"></a>
-      <a href="mailto:issayzly07@gmail.com" target="_blank"><img
-          src="https://cdn-icons-png.flaticon.com/512/3178/3178158.png" alt="Email"
-          style="width:24px; height:24px;"></a>
+    <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+      <!-- ÍCONES -->
+      <div class="social-links">
+        <a href="https://github.com/Issayz" target="_blank" class="social-icon">
+          <i class='bx bxl-github'></i>
+        </a>
+        <a href="https://www.instagram.com/issayzly07" target="_blank" class="social-icon">
+          <i class='bx bxl-instagram'></i>
+        </a>
+        <a href="https://www.linkedin.com/in/raissa-caetano-649100370" target="_blank" class="social-icon">
+          <i class='bx bxl-linkedin'></i>
+        </a>
+        <a href="https://discord.com/users/Issayz" target="_blank" class="social-icon">
+          <i class='bx bxl-discord'></i>
+        </a>
+        <a href="mailto:issayzly07@gmail.com" target="_blank" class="social-icon">
+          <i class='bx bxl-gmail'></i>
+        </a>
+      </div>
     </div>
+  </footer>
+  
     <p>&copy; 2025 Raissa Caetano. Todos os direitos reservados.</p>
   </div>
 </footer>
 
 <script>
   function enviarWhatsApp() {
-    const nome = document.getElementById("nome").value;
-    const mensagem = document.getElementById("mensagem").value;
-    const telefone = "5519992550236";
-    const texto = `Olá, meu nome é ${nome}. %0A${mensagem}`;
-    const url = `https://wa.me/${telefone}?text=${texto}`;
+    const nome = document.getElementById("nome").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
+
+    if (!nome || !mensagem) {
+      alert("Por favor, preencha seu nome e a mensagem!");
+      return;
+    }
+
+    const telefone = "5519992550236"; 
+    const texto = `Olá, meu nome é ${nome}. \n${mensagem}`;
+    const url = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
+    
     window.open(url, "_blank");
   }
 </script>
 </body>
 
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+  ScrollReveal({
+    origin: "bottom",
+    distance: "50px",
+    duration: 1000,
+  }).reveal(
+    `#home, 
+     #home img, 
+     #about, 
+     #about header, 
+     #about p,
+     #about img,
+     #projects,
+     #projects header,
+     #projects .card,
+     #knowledge,
+     #knowledge header,
+     #knowledge .card,
+     #contact,
+     #contact header`
+  );
+  </script>  
 </html>

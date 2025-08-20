@@ -261,9 +261,6 @@ main, .content, .principal, section:first-of-type {
 }
 
 
-
-
-
 /* RESPONSIVO SIMPLES */
 @media (max-width: 768px) {
   .main-container {
@@ -517,7 +514,7 @@ section .title {
   font-size: 2.5rem;
   margin-bottom: 30px;
   color: #6a027e; 
-  margin-top: 90px; /* empurra tudo para baixo */
+  margin-top: 90px; 
 }
 
 section .title span {
@@ -755,4 +752,73 @@ section .button button:hover{
 #Habilidades.visible, #Projetos.visible, #Contato.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+.contato {
+  text-align: center;
+  color: #fff;
+  padding: 50px 20px;
+}
+
+.contato h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.contato hr {
+  width: 80px;
+  border: 2px solid #6a027e; 
+  margin: 0 auto 30px;
+}
+
+.info-contato {
+  margin-bottom: 30px;
+  text-align: left;
+  display: inline-block;
+}
+
+.info-contato p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.info-contato i {
+  color: #6a027e; 
+  margin-right: 10px;
+}
+
+.info-contato a {
+  color: #6a027e;
+  text-decoration: none;
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+.form-contato input,
+.form-contato textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.form-contato button {
+  background: #6a027e;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.form-contato button:hover {
+  background: #cbb2f0;
 }
