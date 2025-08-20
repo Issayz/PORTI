@@ -186,12 +186,15 @@ main, .content, .principal, section:first-of-type {
   object-fit: cover;
   object-position: center top; 
   display: block;
-  border-radius: 50%; 
+  border-radius: 100%;
+  transform: scale(1.1); 
+  object-position: -200%;
 }
 
 .image:hover {
   transform: scale(1.05);
 }
+
 
 
 /* TEXTO LADO DIREITO */
