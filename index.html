@@ -12,6 +12,12 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/yourkitcode.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+  h3 {
+    font-family: 'Josefin Sans', 'Roboto Condensed', Arial, sans-serif;
+    font-weight: normal;
+  }
+</style>
 
 </head>
 
@@ -22,7 +28,6 @@
       <div class="logo"><span>ISSAYZ</span></div>
       <div class="links">
         <a href="#Início">Início</a>
-        <a href="#Sobre">Sobre</a>
         <a href="#Habilidades">Habilidades</a>
         <a href="#Projetos">Projetos</a>
         <a href="#Contato">Contato</a>
@@ -60,6 +65,12 @@
     <div class="content">
       <h1>Oie! meu nome é <span>RAISSA</span></h1>
       <h2 class="typewriter">E eu sou <span class="changing-text roxo"></span></h2>
+      <h3>
+        tenho 18 anos e sou estudante de Análise e Desenvolvimento de Sistemas...
+      </h3>
+      
+      
+      
 
       <!-- ÍCONES -->
       <div class="social-links">
@@ -81,29 +92,11 @@
   </main>
 </body>
 
-<!-- About Section -->
-<section class="section" id="Sobre">
-  <div class="content">
-    <div class="title"><span>Sobre</span></div>
-    <div class="about-details">
-      <div class="left">
-        <img src="CIMG5123.JPG" alt="Minha Foto" />
-      </div>
-      <div class="right">
-        <div class="topic">Quem sou eu?</div>
-        <p>Olá! Meu nome é Raissa Caetano, tenho 18 anos e sou estudante de Análise e Desenvolvimento de Sistemas. Sou
-          apaixonada por tecnologia e estou sempre em busca de aprender novas habilidades. Atualmente, estou focada em
-          aprimorar meus conhecimentos em desenvolvimento web, especialmente em frontend e backend.</p>
-        <p>Além disso, gosto de fotografia e sempre busco capturar momentos especiais. Estou animada para compartilhar
-          meus projetos e experiências com você!</p>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <script>
   window.addEventListener('scroll', () => {
-    const sobre = document.querySelector('#sobre');
+    const sobre = document.querySelector('#habilidades');
     const topo = sobre.getBoundingClientRect().top;
     const alturaTela = window.innerHeight;
 
@@ -204,26 +197,66 @@
 
 
 <!-- Projetos -->
-<section class="section" id="Projetos">
-  <div class="content">
-    <div class="title"><span>Projetos</span></div>
-    <div class="boxes">
-      <div class="box">
-        <div class="icon"><i class="fas fa-desktop"></i></div>
-        <div class="topic">Web Development</div>
-        <p>Desenvolvimento de sites e aplicações web.</p>
+<section id="Projetos" class="projects-section">
+  <h2>Meus Projetos 🚀</h2>
+  <div class="projects-container">
+
+    <!-- Projeto 1 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="https://i.postimg.cc/3r7RkjLQ/aula16.png" alt="Projeto Aula 16">
+        <div class="project-hover">
+          <a href="https://issayz.github.io/aula-16/" target="_blank">🌐 Visitar</a>
+          <a href="https://github.com/issayz/aula-16" target="_blank">💻 GitHub</a>
+        </div>
       </div>
-      <div class="box">
-        <div class="icon"><i class="fas fa-camera-retro"></i></div>
-        <div class="topic">Fotografia</div>
-        <p>Capturando momentos especiais.</p>
-      </div>
-      <div class="box">
-        <div class="icon"><i class="fas fa-mobile-alt"></i></div>
-        <div class="topic">Apps</div>
-        <p>Desenvolvimento de aplicativos móveis.</p>
+      <div class="project-info">
+        <p>Projeto Aula 16 - Layout web com HTML e CSS responsivo.</p>
+        <div class="project-tech">
+          <span>🌐 HTML</span>
+          <span>🎨 CSS</span>
+        </div>
       </div>
     </div>
+
+    <!-- Projeto 2 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="https://i.postimg.cc/nVt4t1mB/sitepessoal.png" alt="Portfólio">
+        <div class="project-hover">
+          <a href="https://issayz.github.io/" target="_blank">🌐 Visitar</a>
+          <a href="https://github.com/issayz/issayz.github.io" target="_blank">💻 GitHub</a>
+        </div>
+      </div>
+      <div class="project-info">
+        <p>Meu portfólio pessoal, mostrando habilidades e projetos.</p>
+        <div class="project-tech">
+          <span>🌐 HTML</span>
+          <span>🎨 CSS</span>
+          <span>⚡ JS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projeto 3 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="https://i.postimg.cc/FsW4mK7Q/pong.png" alt="Jogo Pong">
+        <div class="project-hover">
+          <a href="https://issayz.github.io/Pong/" target="_blank">🎮 Jogar</a>
+          <a href="https://github.com/issayz/Pong" target="_blank">💻 GitHub</a>
+        </div>
+      </div>
+      <div class="project-info">
+        <p>Jogo Pong clássico feito em JavaScript.</p>
+        <div class="project-tech">
+          <span>🌐 HTML</span>
+          <span>🎨 CSS</span>
+          <span>⚡ JS</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
