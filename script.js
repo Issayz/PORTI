@@ -1,4 +1,4 @@
-// TYPEWRITER
+   // TYPEWRITER
 const texts = ["estudante de", "desenvolvimento de sistemas"];
 const changingText = document.querySelector(".changing-text");
 let index = 0;
@@ -29,46 +29,30 @@ function type() {
 }
 type();
 
-// SCROLL E ATIVAÇÃO DE LINKS
+   // SCROLL E ANIMAÇÕES 
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.links a');
 
 window.addEventListener('scroll', () => {
-  let current = '';
 
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (pageYOffset >= sectionTop - sectionHeight / 3) {
-      current = section.getAttribute('id');
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
-      link.classList.add('active');
-    }
-  });
-
-  // Mostra scroll bar temporariamente
+   // MOSTRA SCROLL BAR TEMPORARIAMENTE 
   document.body.classList.add('show-scrollbar');
   clearTimeout(window.scrollTimeout);
   window.scrollTimeout = setTimeout(() => {
     document.body.classList.remove('show-scrollbar');
   }, 1000);
 
-  // Animação das seções
+   // ANIMAÇÃO DAS SEÇÕES
   sections.forEach(section => {
     const sectionTop = section.getBoundingClientRect().top;
-    const triggerPoint = window.innerHeight - 100; // quando a seção entra na tela
+    const triggerPoint = window.innerHeight - 100; 
     if (sectionTop < triggerPoint) {
       section.classList.add('visible');
     }
   });
 });
 
-// NAVBAR
+   // NAVBAR 
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
@@ -78,7 +62,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// SKILL BARS
+   //  SKILL BARS 
 window.addEventListener("load", () => {
   document.querySelectorAll(".skill-progress").forEach(bar => {
     const width = bar.getAttribute("data-progress"); 
@@ -115,3 +99,48 @@ setTimeout(() => {
   document.querySelector("#sobre").classList.add("aparecer");
 }, 300);
 
+   // MENU CLIQUE FIXO 
+let activeLink = null; 
+
+navLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault(); // evita jump imediato da âncora, opcional
+
+    // remove active de todos
+    navLinks.forEach(l => l.classList.remove("active"));
+
+    // adiciona active no link clicado
+    link.classList.add("active");
+
+    // guarda qual link está fixo
+    activeLink = link;
+
+    // rola a página até a seção clicada
+    const target = document.querySelector(link.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+
+// scroll continua animando se quiser, mas não muda o link fixo
+window.addEventListener("scroll", () => {
+  if (activeLink) return; // se o usuário clicou, não muda o link
+
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    const sectionHeight = section.offsetHeight;
+
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
+});

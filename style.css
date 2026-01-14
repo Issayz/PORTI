@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #111;
+  background-color: #000;
   color: white;
   overflow-x: hidden;
 }
@@ -32,22 +32,13 @@ html {
 }
 
 #inicio h1 {
-  font-size: 2.5rem;
+  font-size: 1.3rem;
   margin-bottom: 20px;
 }
 
 #inicio p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #ccc;
-}
-
-body::-webkit-scrollbar {
-  width: 8px;
-  opacity: 0; 
-  transition: opacity 0.3s ease;
-}
-body.show-scrollbar::-webkit-scrollbar {
-  opacity: 1; 
 }
 
 /* NAVBAR FIXA */
@@ -78,14 +69,38 @@ main, .content, .principal, section:first-of-type {
 
 /* Logo */
 .logo {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  transition: 
+    transform 0.3s ease,
+    filter 0.3s ease;
+  color: #6a027e;
+  font-size: 1.3rem;
+  font-weight: 1000;
+}
+
+/* efeito hover */
+.logo:hover {
+  transform: scale(1.25); /* pequeno zoom */
+  filter: brightness(1.2); /* clareia levemente */
+  color: #ab5be9
 }
 
 .logo span {
   color: #6a027e;
   text-shadow: 0 0 10px #6a027e;
+  .logo {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logo:hover span {
+  text-shadow: 
+    0 0 15px #6a027e,
+    0 0 30px #6a027e;
+}
+
 }
 
 /* Menu links */
@@ -120,6 +135,7 @@ main, .content, .principal, section:first-of-type {
 .links a:hover {
   color: #6a027e;
 }
+
 
 /* Ícone do menu mobile */
 .menu-icon {
@@ -275,7 +291,8 @@ main, .content, .principal, section:first-of-type {
 }
 
 .social-links a:hover {
-  color: #fff;         
+  color: #ab5be9;
+;         
   transform: translateY(-5px); 
 }
 
@@ -351,8 +368,8 @@ main, .content, .principal, section:first-of-type {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #111; 
+  font-family: "Poppins", sans-serif;
+  background-color: #000; 
   color: #fff;
 }
 
@@ -363,7 +380,7 @@ body {
   justify-content: center;
   padding: 40px;
   box-sizing: border-box;
-  background-color: #111; 
+  background-color: #000; 
   section {
   min-height: 100vh; 
   display: flex;
@@ -376,8 +393,8 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #111; 
+  font-family: "Poppins", sans-serif;
+  background-color: #000; 
   color: #fff;
 }
 
@@ -388,7 +405,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #111; 
+  background: #000; 
 }
 
 ::-webkit-scrollbar-thumb {
@@ -433,7 +450,7 @@ section .content {
   padding: 20px;
   text-align: center;
   width: 80%;
-  font-family: poppins, sans-serif;
+  font-family: "poppins", sans-serif;
 }
 
 .about .about-details {
@@ -586,11 +603,11 @@ section .button button:hover{
   transition: width 1.5s ease-out;
 }
 
-/* SEÇÃO DE HABILIDADES */
+/* HABILIDADES */
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+  gap: 10px;
   margin-top: 30px;
   width: 100%;
   max-width: 1200px;
@@ -627,7 +644,7 @@ section .button button:hover{
 
 .skill-bar {
   height: 10px;
-  background-color: #333;
+  background-color: #000;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -755,26 +772,26 @@ section .button button:hover{
 }
 
 .form-contato button:hover {
-  background: #cbb2f0;
+  background: #ab5be9;
 }
 
 .projects-section {
   text-align: center;
-  padding: 50px 150px;
-  background: #111;
+  padding: 100px 300px;
+  background: #000;
   color: #6a027e;
 }
 
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
+  gap: 40px;
+  margin-top: 50px;
 }
 
 .project-card {
-  background: #1a1a1a;
-  border-radius: 15px;
+  background: #111;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
   transition: transform 0.3s ease;
@@ -792,7 +809,7 @@ section .button button:hover{
 .project-image img {
   width: 100%;
   display: block;
-  border-bottom: 3px solid #a917e1;
+  border-bottom: 3px solid #000;
 }
 
 .project-hover {
@@ -815,7 +832,7 @@ section .button button:hover{
 }
 
 .project-hover a {
-  background: #111;
+  background: #000;
   color: #fff;
   padding: 10px 15px;
   border-radius: 8px;
@@ -826,7 +843,7 @@ section .button button:hover{
 
 .project-hover a:hover {
   background: #fff;
-  color: #111;
+  color: #000;
 }
 
 .project-info {
@@ -841,7 +858,7 @@ section .button button:hover{
 }
 
 .project-tech span {
-  background: #222;
+  background: #000;
   padding: 5px 10px;
   border-radius: 6px;
   font-size: 0.9rem;
@@ -850,4 +867,143 @@ section .button button:hover{
 
 .project-tech span:hover {
   transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background-color: #111; 
+  color: #ccc;            
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  margin-top: 50px; 
+  border-top: 1px solid #6a027e; 
+}
+
+footer a {
+  color: #6a027e;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #ab5be9;
+}
+/* Responsividade geral */
+@media (max-width: 1200px) {
+  .main-container {
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+
+  .content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .image {
+    margin-top: 50px;
+    width: 250px;
+    height: 250px;
+  }
+
+  .projects-section {
+    padding: 80px 50px;
+  }
+
+  .projects-container {
+    gap: 20px;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+}
+
+/* Mobile: tablets e celulares */
+@media (max-width: 100px) {
+  .main-container {
+    flex-direction: column;
+    padding: 10rem;
+    gap: 10rem;
+  }
+
+  .image {
+    width: 50px;
+    height: 50px;
+    margin-top: 0px;
+  }
+
+  .content h1 {
+    font-size: 1.8rem;
+  }
+
+  .typewriter {
+    font-size: 1.2rem;
+  }
+
+  .links {
+    display: none; /* menu desktop escondido */
+  }
+
+  .menu-icon {
+    display: block; /* mostra menu mobile */
+  }
+
+  .dropdown {
+    width: 180px;
+    top: 9vh;
+    padding: 1rem;
+  }
+
+  .projects-section {
+    padding: 60px 20px;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  footer {
+    font-size: 0.75rem;
+    padding: 15px 10px;
+  }
+}
+
+/* Pequenos ajustes para celulares muito pequenos */
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .typewriter {
+    font-size: 1rem;
+  }
+
+  .main-container {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .image {
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+  }
+
+  .projects-section {
+    padding: 50px 10px;
+  }
+
+  footer {
+    font-size: 0.7rem;
+  }
 }

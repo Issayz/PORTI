@@ -1,98 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-
 <head>
-  
-  <script src="script.js" defer></script>
-
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>issayzly07 | Portfólio</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/yourkitcode.js" crossorigin="anonymous"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="script.js" defer></script>
   <style>
-  h3 {
-    font-family: 'Josefin Sans', 'Roboto Condensed', Arial, sans-serif;
-    font-weight: normal;
-  }
-</style>
-
+    h3 { font-family: 'Josefin Sans', 'Roboto Condensed', Arial, sans-serif; font-weight: normal; }
+  </style>
 </head>
-
 <body>
-  <!-- MENU FIXO -->
-  <header class="navbar">
-    <div class="nav-container">
-      <div class="logo"><span>ISSAYZ</span></div>
-      <div class="links">
-        <a href="#Início">Início</a>
-        <a href="#Habilidades">Habilidades</a>
-        <a href="#Projetos">Projetos</a>
-        <a href="#Contato">Contato</a>
-      </div>
-      <div class="menu-icon" onclick="hamburger()">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-    </div>
-  </header>
 
-  <div class="dropdown">
+
+    <!-- NAVBAR FIXA -->
+<header class="navbar">
+  <div class="nav-container">
+    <a href="https://linktr.ee/issayzly07" class="logo" target="_blank">ISSAYZ<span></span></a>
+    <div class="links">
+      <a href="#Início">Início</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <div class="menu-icon" >
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+</header>
+    <!-- DROPDOWN MOBILE -->
+  <div class="dropdown" id="dropdown">
+    <i class="fa-solid fa-xmark" id="menu-close"></i>
     <a href="#Início">Início</a>
-    <a href="#Sobre">Sobre</a>
-    <a href="#Habilidades">Habilidades</a>
+    <a href="#habilidades">Habilidades</a>
     <a href="#projetos">Projetos</a>
     <a href="#contato">Contato</a>
-    <i class="fa-solid fa-xmark" onclick="hamburger()"></i>
   </div>
 
+  
+   <!-- INÍCIO -->
+ <main class="main-container" id="Início">
+ 
+   <!-- FOTO -->
+  <div class="image">
+    <img src="./image/perfil.jpg" alt="Foto de perfil" />
+  </div>
 
-  <!-- CONTEÚDO PRINCIPAL -->
-  <main class="main-container" id="Início">
+   <!-- TEXTO -->
+  <div class="content">
+    <h1>Oie! meu nome é <span>RAISSA</span></h1>
+    <h2 class="typewriter">E eu sou <span class="changing-text roxo"></span></h2>
+    <h3>tenho 18 anos e sou estudante de Análise e Desenvolvimento de Sistemas...</h3>
 
-    <div class="menu-icon">
-      <i class="fa-solid fa-bars" onclick="hamburger()"></i>
+   <!-- ÍCONES -->
+    <div class="social-links">
+      <a href="https://github.com/Issayz" target="_blank" class="social-icon">
+        <i class='bx bxl-github'></i>
+      </a>
+      <a href="https://www.instagram.com/issayzly07" target="_blank" class="social-icon">
+        <i class='bx bxl-instagram'></i>
+      </a>
+      <a href="https://www.linkedin.com/in/raissa-caetano-649100370" target="_blank" class="social-icon">
+        <i class='bx bxl-linkedin'></i>
+      </a>
     </div>
-
-
-    <!-- FOTO -->
-    <div class="image">
-      <img src="./image/perfil.jpg" alt="Foto de perfil" />
-    </div>
-
-    <!-- TEXTO -->
-    <div class="content">
-      <h1>Oie! meu nome é <span>RAISSA</span></h1>
-      <h2 class="typewriter">E eu sou <span class="changing-text roxo"></span></h2>
-      <h3>
-        tenho 18 anos e sou estudante de Análise e Desenvolvimento de Sistemas...
-      </h3>
-      
-      
-      
-
-      <!-- ÍCONES -->
-      <div class="social-links">
-        <a href="https://github.com/Issayz" target="_blank" class="social-icon">
-          <i class='bx bxl-github'></i>
-        </a>
-        <a href="https://www.instagram.com/issayzly07" target="_blank" class="social-icon">
-          <i class='bx bxl-instagram'></i>
-        </a>
-        <a href="https://www.linkedin.com/in/raissa-caetano-649100370" target="_blank" class="social-icon">
-          <i class='bx bxl-linkedin'></i>
-        </a>
-      </div>
-
-      <!-- BOXICONS CDN -->
-      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    </div>
-    </div>
-  </main>
-</body>
-
-
+  </div>
+</main>
+  
+   <!-- NO HEAD -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 <script>
   window.addEventListener('scroll', () => {
@@ -107,221 +85,176 @@
 </script>
 
 
+  <!-- HABILIDADES -->
+  <section class="section" id="habilidades">
+    <div class="container">
+      <div class="title"><span>Habilidades</span></div>
+      <div class="skills-container">
 
-<!-- Skills Section -->
-<section class="section" id="Habilidades">
-  <div class="container">
-    <div class="title"><span>Habilidades</span></div>
-    <div class="skills-container">
-
-      <!-- Frontend -->
-      <div class="skill-card">
-        <h3><i class="fas fa-code"></i> Frontend</h3>
-
-        <div class="skill-item">
-          <div class="skill-name"><span>HTML/CSS</span><span>90%</span></div>
-          <div class="skill-bar">
-            <div class="skill-progress" style="--target: 90%"></div>
+  <!-- FRONT -->
+        <div class="skill-card">
+          <h3><i class="fas fa-code"></i> Frontend</h3>
+          <div class="skill-item">
+            <div class="skill-name"><span>HTML/CSS</span><span>90%</span></div>
+            <div class="skill-bar"><div class="skill-progress" style="--target: 90%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name"><span>JavaScript</span><span>80%</span></div>
+            <div class="skill-bar"><div class="skill-progress" style="--target: 80%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name"><span>React</span><span>70%</span></div>
+            <div class="skill-bar"><div class="skill-progress" style="--target: 70%"></div></div>
           </div>
         </div>
 
-        <div class="skill-item">
-          <div class="skill-name"><span>JavaScript</span><span>80%</span></div>
-          <div class="skill-bar">
-            <div class="skill-progress" style="--target: 80%"></div>
+  <!-- BACK -->
+        <div class="skill-card">
+          <h3><i class="fas fa-server"></i> Backend</h3>
+          <div class="skill-item">
+            <div class="skill-name"><span>Node.js</span><span>75%</span></div>
+            <div class="skill-bar"><div class="skill-progress" style="--target: 75%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name"><span>Express</span><span>10%</span></div>
+            <div class="skill-bar"><div class="skill-progress" style="--target: 10%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name"><span>TypeScript</span><span>35%</span></div>
+            <div class="skill-bar"><div class="skill-progress" style="--target: 35%"></div></div>
           </div>
         </div>
 
-        <div class="skill-item">
-          <div class="skill-name"><span>React</span><span>70%</span></div>
-          <div class="skill-bar">
-            <div class="skill-progress" style="--target: 70%"></div>
+  <!-- OUTRAS -->
+        <div class="skill-card">
+          <h3><i class="fas fa-tools"></i> Outras</h3>
+          <div class="skill-item">
+            <div class="skill-name"><span>Git/GitHub</span><span>85%</span></div>
+            <div class="skill-bar"><div class="skill-progress" style="--target: 85%"></div></div>
           </div>
-        </div>
-      </div>
-
-      <!-- Backend -->
-      <div class="skill-card">
-        <h3><i class="fas fa-server"></i> Backend</h3>
-
-        <div class="skill-item">
-          <div class="skill-name"><span>Node.js</span><span>75%</span></div>
-          <div class="skill-bar">
-            <div class="skill-progress" style="--target: 75%"></div>
+          <div class="skill-item">
+            <div class="skill-name"><span>Python</span><span>70%</span></div>
+            <div class="skill-bar"><div class="skill-progress" style="--target: 70%"></div></div>
           </div>
-        </div>
-
-        <div class="skill-item">
-          <div class="skill-name"><span>Express</span><span>10%</span></div>
-          <div class="skill-bar">
-            <div class="skill-progress" style="--target: 10%"></div>
-          </div>
-        </div>
-
-        <div class="skill-item">
-          <div class="skill-name"><span>TypeScript</span><span>35%</span></div>
-          <div class="skill-bar">
-            <div class="skill-progress" style="--target: 35%"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Outras -->
-      <div class="skill-card">
-        <h3><i class="fas fa-tools"></i> Outras</h3>
-
-        <div class="skill-item">
-          <div class="skill-name"><span>Git/GitHub</span><span>85%</span></div>
-          <div class="skill-bar">
-            <div class="skill-progress" style="--target: 85%"></div>
-          </div>
-        </div>
-
-        <div class="skill-item">
-          <div class="skill-name"><span>Python</span><span>70%</span></div>
-          <div class="skill-bar">
-            <div class="skill-progress" style="--target: 70%"></div>
-          </div>
-        </div>
-
-        <div class="skill-item">
-          <div class="skill-name"><span>MySQL</span><span>40%</span></div>
-          <div class="skill-bar">
-            <div class="skill-progress" style="--target: 40%"></div>
+          <div class="skill-item">
+            <div class="skill-name"><span>MySQL</span><span>40%</span></div>
+            <div class="skill-bar"><div class="skill-progress" style="--target: 40%"></div></div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- PROJETOS -->
+  <section id="projetos" class="projects-section">
+    <h2>Meus Projetos</h2>
+    <div class="projects-container">
 
-<!-- Projetos -->
-<section id="Projetos" class="projects-section">
-  <h2>Meus Projetos</h2>
-  <div class="projects-container">
-
-    <!-- Projeto 1 -->
-    <div class="project-card">
-      <div class="project-image">
-        <img src="https://i.postimg.cc/3r7RkjLQ/aula16.png" alt="Projeto Aula 16">
-        <div class="project-hover">
-          <a href="https://issayz.github.io/aula-16/" target="_blank">🌐 Visitar</a>
-          <a href="https://github.com/issayz/aula-16" target="_blank">💻 GitHub</a>
+  <!-- PROJETO 1 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://i.postimg.cc/3r7RkjLQ/aula16.png" alt="Projeto Aula 16">
+          <div class="project-hover">
+            <a href="https://issayz.github.io/aula-16/" target="_blank">🌐 Visitar</a>
+            <a href="https://github.com/issayz/aula-16" target="_blank">💻 GitHub</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <p>Projeto Aula 16 - Layout web com HTML e CSS responsivo.</p>
+          <div class="project-tech"><span>🌐 HTML</span><span>🎨 CSS</span></div>
         </div>
       </div>
-      <div class="project-info">
-        <p>Projeto Aula 16 - Layout web com HTML e CSS responsivo.</p>
-        <div class="project-tech">
-          <span>🌐 HTML</span>
-          <span>🎨 CSS</span>
-        </div>
-      </div>
-    </div>
 
-    <!-- Projeto 2 -->
-    <div class="project-card">
-      <div class="project-image">
-        <img src="https://i.postimg.cc/nVt4t1mB/sitepessoal.png" alt="Portfólio">
-        <div class="project-hover">
-          <a href="https://issayz.github.io/" target="_blank">🌐 Visitar</a>
-          <a href="https://github.com/issayz/issayz.github.io" target="_blank">💻 GitHub</a>
+  <!-- PROJETO 2 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://i.postimg.cc/nVt4t1mB/sitepessoal.png" alt="Portfólio">
+          <div class="project-hover">
+            <a href="https://issayz.github.io/" target="_blank">🌐 Visitar</a>
+            <a href="https://github.com/issayz/issayz.github.io" target="_blank">💻 GitHub</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <p>Meu portfólio pessoal, mostrando habilidades e projetos.</p>
+          <div class="project-tech"><span>🌐 HTML</span><span>🎨 CSS</span><span>⚡ JS</span></div>
         </div>
       </div>
-      <div class="project-info">
-        <p>Meu portfólio pessoal, mostrando habilidades e projetos.</p>
-        <div class="project-tech">
-          <span>🌐 HTML</span>
-          <span>🎨 CSS</span>
-          <span>⚡ JS</span>
+      
+  <!-- PROJETO 3 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://i.postimg.cc/FsW4mK7Q/pong.png" alt="Jogo Pong">
+          <div class="project-hover">
+            <a href="https://issayz.github.io/Pong/" target="_blank">🎮 Jogar</a>
+            <a href="https://github.com/issayz/Pong" target="_blank">💻 GitHub</a>
+          </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Projeto 3 -->
-    <div class="project-card">
-      <div class="project-image">
-        <img src="https://i.postimg.cc/FsW4mK7Q/pong.png" alt="Jogo Pong">
-        <div class="project-hover">
-          <a href="https://issayz.github.io/Pong/" target="_blank">🎮 Jogar</a>
-          <a href="https://github.com/issayz/Pong" target="_blank">💻 GitHub</a>
-        </div>
-      </div>
-      <div class="project-info">
-        <p>Jogo Pong clássico feito em JavaScript.</p>
-        <div class="project-tech">
-          <span>🌐 HTML</span>
-          <span>🎨 CSS</span>
-          <span>⚡ JS</span>
+        <div class="project-info">
+          <p>Jogo Pong clássico feito em JavaScript.</p>
+          <div class="project-tech"><span>🌐 HTML</span><span>🎨 CSS</span><span>⚡ JS</span></div>
         </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
 
-<!-- Contato -->
-<section id="Contato">
-<section id="contato" class="contato">
-  <h2>Fale comigo!</h2>
-  <hr>
 
-  <div class="info-contato">
-    <div class="linha">
-      <i class="fas fa-envelope"></i>
-      <span>issayzly07@gmail.com</span>
+ <!-- CONTATO -->
+  <section id="contato" class="contato">
+    <h2>Fale comigo!</h2>
+    <hr>
+    <div class="info-contato">
+      <div class="linha"><i class="fas fa-envelope"></i> <a href="mailto:issayzly07@gmail.com">issayzly07@gmail.com</a></div>
+      <div class="linha"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5519992550236" target="_blank">WhatsApp</a></div>
     </div>
-    <div class="linha">
-      <i class="fas fa-phone"></i>
-      <span>+55 19 99255-0236</span>
-    </div>
-    <div class="linha">
-      <i class="fab fa-whatsapp"></i>
-      <a href="https://wa.me/5519992550236" target="_blank">WhatsApp</a>
-    </div>
-  </div>
-
-  <form class="form-contato">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" required>
-
-    <label for="mensagem">Mensagem:</label>
-    <textarea id="mensagem" name="mensagem" required></textarea>
-
-    <button type="button" onclick="enviarWhatsApp()">Enviar WhatsApp</button>
-  </form>
-</section>
-
-
-<!-- Footer -->
-<footer>
-    <div class="container" style="display: flex; flex-direction: column; align-items: center;">
-      <!-- ÍCONES -->
+    <form class="form-contato">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required>
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" required></textarea>
+      <button type="button" onclick="enviarWhatsApp()">Enviar WhatsApp</button>
+    </form>
+  </section>
+ <!-- FOOTER -->
+  <footer>
+    <div class="container" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
       <div class="social-links">
-        <a href="https://github.com/Issayz" target="_blank" class="social-icon">
-          <i class='bx bxl-github'></i>
-        </a>
-        <a href="https://www.instagram.com/issayzly07" target="_blank" class="social-icon">
-          <i class='bx bxl-instagram'></i>
-        </a>
-        <a href="https://www.linkedin.com/in/raissa-caetano-649100370" target="_blank" class="social-icon">
-          <i class='bx bxl-linkedin'></i>
-        </a>
-        <a href="https://discord.gg/9GZQZARdMM" target="_blank" class="social-icon">
-          <i class='bx bxl-discord'></i>
-        </a>
-        <a href="mailto:issayzly07@gmail.com" target="_blank" class="social-icon">
-          <i class='bx bxl-gmail'></i>
-        </a>
+        <a href="https://github.com/Issayz" target="_blank"><i class='bx bxl-github'></i></a>
+        <a href="https://www.instagram.com/issayzly07" target="_blank"><i class='bx bxl-instagram'></i></a>
+        <a href="https://www.linkedin.com/in/raissa-caetano-649100370" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://discord.gg/9GZQZARdMM" target="_blank"><i class='bx bxl-discord'></i></a>
+        <a href="mailto:issayzly07@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a>
       </div>
+      <p>&copy; <span id="year"></span> Raissa Caetano. Todos os direitos reservados.</p>
     </div>
-
-  
-    <p>&copy; 2025 Raissa Caetano. Todos os direitos reservados.</p>
-  </div>
-</footer>
+  </footer>
 
 <script>
+  // ATUALIZAR O ANO AUTOMATICAMENTE
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // MENU MOBILE  
+  const menuToggles = document.querySelectorAll(".menu-icon"); 
+  const menuClose = document.querySelector(".dropdown i.fa-xmark");
+  const dropdown = document.querySelector(".dropdown");
+
+  menuToggles.forEach(menuToggle => {
+    menuToggle.addEventListener("click", () => {
+      if (dropdown) dropdown.style.display = "flex";
+    });
+  });
+
+  if (menuClose && dropdown) {
+    menuClose.addEventListener("click", () => dropdown.style.display = "none");
+  }
+
+  dropdown?.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      dropdown.style.display = "none";
+    });
+  });
+
+  // ENVIAR WHATSAPP  
   function enviarWhatsApp() {
     const nome = document.getElementById("nome").value.trim();
     const mensagem = document.getElementById("mensagem").value.trim();
@@ -334,26 +267,25 @@
     const telefone = "5519992550236"; 
     const texto = `Olá, meu nome é ${nome}. \n${mensagem}`;
     const url = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
-    
+
     window.open(url, "_blank");
   }
 </script>
 
-</body>
-
+<script src="script.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 
 <script>
-ScrollReveal({
-  origin: "bottom",
-  distance: "50px",
-  duration: 1000,
-}).reveal(
-  `#inicio, 
-  #sobre,
-  #habilidades,
-  #projetos,
-  #contato`
-);
-  </script>  
-</html>
+  // SCROLLREVEAL
+  ScrollReveal({
+    origin: "bottom",
+    distance: "50px",
+    duration: 1000,
+  }).reveal(
+    `#inicio, 
+    #sobre,
+    #habilidades,
+    #projetos,
+    #contato`
+  );
+</script>
