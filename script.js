@@ -99,48 +99,4 @@ setTimeout(() => {
   document.querySelector("#sobre").classList.add("aparecer");
 }, 300);
 
-   // MENU CLIQUE FIXO 
-let activeLink = null; 
 
-navLinks.forEach(link => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault(); // evita jump imediato da âncora, opcional
-
-    // remove active de todos
-    navLinks.forEach(l => l.classList.remove("active"));
-
-    // adiciona active no link clicado
-    link.classList.add("active");
-
-    // guarda qual link está fixo
-    activeLink = link;
-
-    // rola a página até a seção clicada
-    const target = document.querySelector(link.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
-  });
-});
-
-// scroll continua animando se quiser, mas não muda o link fixo
-window.addEventListener("scroll", () => {
-  if (activeLink) return; // se o usuário clicou, não muda o link
-
-  let current = "";
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 150;
-    const sectionHeight = section.offsetHeight;
-
-    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("active");
-    }
-  });
-});
