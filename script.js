@@ -1,7 +1,7 @@
 /* ===============================
    TYPEWRITER
 ================================ */
-const texts = ["estudante de", "desenvolvimento de sistemas"];
+const texts = ["a programming student,", "turning ideas into real projects!"];
 const changingText = document.querySelector(".changing-text");
 
 let textIndex = 0;

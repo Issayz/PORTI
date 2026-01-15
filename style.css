@@ -1225,7 +1225,7 @@ footer a:hover {
 }
 /* =============================
    RESPONSIVIDADE HABILIDADES
-=============================/
+=============================*/
 @media (max-width: 50px) {
   #habilidades {
     padding: 550px 50px; /* espaço interno suficiente */
