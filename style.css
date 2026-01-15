@@ -668,6 +668,7 @@ section .button button:hover{
   border-radius: 5px;
   width: 0;
   transition: width 1.5s ease-out;
+
 }/* SKILLS */
 .skills-container {
   display: grid;
@@ -724,6 +725,7 @@ section .button button:hover{
   letter-spacing: 3px;
   color: #6a027e;
   margin-top: -20px;
+   letter-spacing: 1px;
   margin: 0 auto 20px auto;
   text-align: center;
 }
@@ -787,7 +789,7 @@ section .button button:hover{
 .form-contato button:hover {
   background: #ab5be9;
 }
-
+/* SEÇÃO DE PROJETOS */
 .projects-section {
   text-align: center;
   padding: 100px 300px;
@@ -795,6 +797,20 @@ section .button button:hover{
   color: #6a027e;
 }
 
+.projects-section h2 {
+  font-family: 'Poppins', sans-serif; 
+  font-size: 2.3rem;                 
+  font-weight: 400;
+  letter-spacing: 3px;               
+  color: #6a027e;   
+   letter-spacing: 1px;                 
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+
+
+/* Container geral dos projetos */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -802,18 +818,26 @@ section .button button:hover{
   margin-top: 50px;
 }
 
+/* =========================
+   CARD DE CADA PROJETO
+========================= */
 .project-card {
   background: #111;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
   transition: transform 0.3s ease;
+  
 }
 
+/* Efeito ao passar o mouse no card */
 .project-card:hover {
   transform: translateY(-8px);
 }
 
+/* =========================
+   IMAGEM DO PROJETO
+========================= */
 .project-image {
   position: relative;
   overflow: hidden;
@@ -822,16 +846,17 @@ section .button button:hover{
 .project-image img {
   width: 100%;
   display: block;
-  border-bottom: 3px solid #000;
+  border-bottom: 3px solid #000; /* separa a imagem do conteúdo */
 }
 
+/* Camada de hover sobre a imagem */
 .project-hover {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(169,23,225,0.8);
+  background: rgba(169,23,225,0.8); /* fundo roxo semitransparente */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -840,10 +865,12 @@ section .button button:hover{
   transition: opacity 0.4s ease;
 }
 
+/* Mostrar overlay ao passar o mouse */
 .project-image:hover .project-hover {
   opacity: 1;
 }
 
+/* Botões dentro do overlay */
 .project-hover a {
   background: #000;
   color: #fff;
@@ -854,15 +881,20 @@ section .button button:hover{
   transition: background 0.3s;
 }
 
+/* Efeito hover nos botões */
 .project-hover a:hover {
   background: #fff;
   color: #000;
 }
 
+/* =========================
+   INFORMAÇÕES DO PROJETO
+========================= */
 .project-info {
   padding: 15px;
 }
 
+/* Tecnologias usadas no projeto */
 .project-tech {
   margin-top: 10px;
   display: flex;
@@ -878,9 +910,11 @@ section .button button:hover{
   transition: transform 0.3s;
 }
 
+/* Efeito hover nas tags de tecnologia */
 .project-tech span:hover {
   transform: scale(1.1);
 }
+
 
 /* Footer */
 footer {
