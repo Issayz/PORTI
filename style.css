@@ -16,14 +16,15 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
  
-#Início {
+#incio {
   scroll-margin-top: 80px;
 }
 
 
 
-#Início {
+#inicio {
   min-height: 100vh; 
   display: flex;
   flex-direction: column;
