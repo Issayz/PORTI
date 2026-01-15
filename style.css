@@ -772,14 +772,14 @@ section .button button:hover{
 
 .projects-section {
   text-align: center;
-  padding: 200px 100px;
+  padding: 150px 80px;
   background: #000;
   color: #6a027e;
 }
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 40px;
   margin-top: 50px;
 }
@@ -983,7 +983,7 @@ footer a:hover {
 
   /* Contato */
   .contato {
-    padding: 160px 20px;
+    padding: 120px 20px;
   }
 
   .form-contato input,
@@ -1048,21 +1048,3 @@ footer a:hover {
   }
 }
 
-/* Celulares muito pequenos */
-@media (max-width: 480px) {
-  #habilidades {
-    padding: 40px 15px;
-  }
-
-  .skill-card h3 {
-    font-size: 1rem;
-  }
-
-  .skill-name span:first-child {
-    font-size: 0.8rem;
-  }
-
-  .skill-name span:last-child {
-    font-size: 0.7rem;
-  }
-}
