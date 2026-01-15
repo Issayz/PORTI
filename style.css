@@ -23,7 +23,7 @@ html {
 
 
 
-#inicio {
+#Início {
   min-height: 100vh; 
   display: flex;
   flex-direction: column;
@@ -32,14 +32,7 @@ html {
   text-align: center;
 }
 
-#Início h1 {
-  font-size: 2.7rem;
-  margin-bottom: 20px;
-}
-#Início h1 span {
-  color: #6a027e;
-  text-shadow: 0 0 10px #6a027e;
-}
+
 /* NAVBAR FIXA */
 .navbar {
   position: fixed;
@@ -87,11 +80,6 @@ main, .content, .principal, section:first-of-type {
 }
 
 
-.logo:hover span {
-  text-shadow: 
-    0 0 15px #6a027e,
-    0 0 30px #6a027e;
-}
 
 
 /* Menu links */
@@ -237,8 +225,9 @@ main, .content, .principal, section:first-of-type {
 
 .content h1 span {
   color: #6a027e;
-  text-shadow: 0 0 10px #6a027e;
+  text-shadow: 0 0 3px #6a027e;
 }
+
 
 /* TYPEWRITER com animação */
 
@@ -289,52 +278,6 @@ main, .content, .principal, section:first-of-type {
 }
 
 
-/* RESPONSIVO SIMPLES */
-@media (max-width: 768px) {
-  .main-container {
-    flex-direction: column;
-    padding: 2rem 1rem;
-    gap: 2rem;
-  }
-
-  .image {
-    width: 250px;
-    height: 250px;
-  }
-  
-#habilidades, 
-#habilidades * {
-  font-family: 'Poppins', sans-serif;
-}
-
-#habilidades {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1s ease, transform 1s ease;
-  scroll-margin-top: 9vh;
-}
-
-#habilidades.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* Projetos */
-#Projetos {
-  opacity: 0;
-  transform: scale(0.8);
-  transition: opacity 1s ease, transform 1s ease;
-}
-#Projetos.visible {
-  opacity: 1;
-  transform: scale(1);
-}
-
-#Projetos {
-  margin-top: 80px; /* aumenta o espaço antes da seção */
-}
-
 
 /* Contato */
 #Contato {
@@ -354,7 +297,6 @@ main, .content, .principal, section:first-of-type {
   .typewriter {
     font-size: 1.4rem;
   }
-}
 
 
 body {
