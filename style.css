@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+
 }
 
 body {
@@ -18,8 +18,9 @@ html {
 }
  
 #Início {
-  scroll-margin-top: 9vh; 
+  scroll-margin-top: 80px;
 }
+
 
 
 #inicio {
@@ -31,12 +32,12 @@ html {
   text-align: center;
 }
 
-#inicio h1 {
+#Início h1 {
   font-size: 1.3rem;
   margin-bottom: 20px;
 }
 
-#inicio p {
+#Início p {
   font-size: 1.3rem;
   color: #ccc;
 }
@@ -87,13 +88,6 @@ main, .content, .principal, section:first-of-type {
   color: #ab5be9
 }
 
-.logo span {
-  color: #6a027e;
-  text-shadow: 0 0 10px #6a027e;
-  .logo {
-  text-decoration: none;
-  cursor: pointer;
-}
 
 .logo:hover span {
   text-shadow: 
@@ -101,7 +95,6 @@ main, .content, .principal, section:first-of-type {
     0 0 30px #6a027e;
 }
 
-}
 
 /* Menu links */
 .links {
@@ -310,21 +303,21 @@ main, .content, .principal, section:first-of-type {
     height: 250px;
   }
   
-/* Habilidades */
-#Habilidades {
-  opacity: 0;
-  transform: translateX(-20px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-#Habilidades.visible {
-  opacity: 1;
-  transform: translateX(0);
+#habilidades, 
+#habilidades * {
+  font-family: 'Poppins', sans-serif;
 }
 
-#Habilidades {
-  scroll-margin-top: 25vh; /* mantém o alinhamento certo com a navbar */
-  padding-top: 180px; /* diminui o espaço interno do topo */
-  margin-top: -60px; /* puxa um pouco a seção pra cima */
+#habilidades {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+  scroll-margin-top: 9vh;
+}
+
+#habilidades.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -381,13 +374,19 @@ body {
   padding: 40px;
   box-sizing: border-box;
   background-color: #000; 
-  section {
   min-height: 100vh; 
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 100px 0;
-  } 
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 body {
