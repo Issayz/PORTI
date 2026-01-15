@@ -551,11 +551,9 @@ section .button button:hover{
   border-radius: 10px;
   box-shadow: var(--box-shadow);
   transition: var(--transition);
-
   border-radius: 10px;
   box-sizing: border-box;
-  display: flex;
-
+  display: flex; 
   gap: 10px;
 }
 
@@ -673,7 +671,10 @@ section .button button:hover{
   background-color: #1a1a1a;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: none;
+  display: flex; /* horizontal por padrão */
+  align-items: center; /* centraliza ícone + nome */
+  gap: 15px; /* espaço entre elementos */
+  box-shadow: 0 0 25px rgba(106,2,126,0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
