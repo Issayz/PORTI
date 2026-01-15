@@ -475,15 +475,15 @@ section .button button:hover{
  color: #6a027e;
 }
 
-/* Skills Section */
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-   width: 100%;
-  padding: 0 10px; /* evita que encoste nas bordas */
-  box-sizing: border-box;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 50px; /* ⬅ aumenta o espaço entre os quadros */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
+
 
 .skill-card {
   background-color: var(--white);
@@ -613,7 +613,7 @@ section .button button:hover{
 
 .skill-card {
   background-color: #1a1a1a;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   box-shadow: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -656,15 +656,11 @@ section .button button:hover{
 }/* SKILLS */
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
-  gap: 60px;
-  align-items: center;
-      gap: 30px;
-    max-width: 90%;
-    margin: 0 auto;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px; /* ⬅ aumenta o espaço entre os quadros */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Barra */
@@ -1023,12 +1019,15 @@ footer a:hover {
     margin: 0 auto;
   }
 
-  .skills-container {
-    grid-template-columns: 5fr; /* uma coluna só */
-    gap: 10px; /* espaço entre os cards */
-    max-width: 100%;
-    margin: 0 auto;
-  }
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 50px; /* ⬅ aumenta o espaço entre os quadros */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 
   .skill-card {
     padding: 10px; /* ajustar o padding interno */
