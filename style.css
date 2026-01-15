@@ -33,15 +33,13 @@ html {
 }
 
 #Início h1 {
-  font-size: 1.3rem;
+  font-size: 2.7rem;
   margin-bottom: 20px;
 }
-
-#Início p {
-  font-size: 1.3rem;
-  color: #ccc;
+#Início h1 span {
+  color: #6a027e;
+  text-shadow: 0 0 10px #6a027e;
 }
-
 /* NAVBAR FIXA */
 .navbar {
   position: fixed;
@@ -624,21 +622,19 @@ section .button button:hover{
   font-size: 2.5rem;
   font-weight: 0;     
   letter-spacing: 3px;  
-  text-shadow: none; /* remove qualquer sombra que apareça por engano */
 }
-
 
 .skill-card {
   background-color: #1a1a1a;
   padding: 20px;
   border-radius: 10px;
   box-shadow: none;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card:hover {
   transform: translateY(-5px);
-  box-shadow: none
+  box-shadow: 0 0 25px rgba(106,2,126,0.6);
 }
 
 .skill-card h3 {
@@ -650,10 +646,11 @@ section .button button:hover{
   gap: 8px;
 }
 
-.skill-card h3 i {
-  color: #6a027e;
+.skill-card i {
+  color: #6a027e !important;
   font-size: 1.5rem;
 }
+
 
 .skill-bar {
   height: 10px;
@@ -668,7 +665,6 @@ section .button button:hover{
   border-radius: 5px;
   width: 0;
   transition: width 1.5s ease-out;
-
 }/* SKILLS */
 .skills-container {
   display: grid;
@@ -725,7 +721,6 @@ section .button button:hover{
   letter-spacing: 3px;
   color: #6a027e;
   margin-top: -20px;
-   letter-spacing: 1px;
   margin: 0 auto 20px auto;
   text-align: center;
 }
@@ -789,7 +784,7 @@ section .button button:hover{
 .form-contato button:hover {
   background: #ab5be9;
 }
-/* SEÇÃO DE PROJETOS */
+
 .projects-section {
   text-align: center;
   padding: 100px 300px;
@@ -797,20 +792,6 @@ section .button button:hover{
   color: #6a027e;
 }
 
-.projects-section h2 {
-  font-family: 'Poppins', sans-serif; 
-  font-size: 2.3rem;                 
-  font-weight: 400;
-  letter-spacing: 3px;               
-  color: #6a027e;   
-   letter-spacing: 1px;                 
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-
-
-/* Container geral dos projetos */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -818,26 +799,18 @@ section .button button:hover{
   margin-top: 50px;
 }
 
-/* =========================
-   CARD DE CADA PROJETO
-========================= */
 .project-card {
   background: #111;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
   transition: transform 0.3s ease;
-  
 }
 
-/* Efeito ao passar o mouse no card */
 .project-card:hover {
   transform: translateY(-8px);
 }
 
-/* =========================
-   IMAGEM DO PROJETO
-========================= */
 .project-image {
   position: relative;
   overflow: hidden;
@@ -846,17 +819,16 @@ section .button button:hover{
 .project-image img {
   width: 100%;
   display: block;
-  border-bottom: 3px solid #000; /* separa a imagem do conteúdo */
+  border-bottom: 3px solid #000;
 }
 
-/* Camada de hover sobre a imagem */
 .project-hover {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(169,23,225,0.8); /* fundo roxo semitransparente */
+  background: rgba(169,23,225,0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -865,12 +837,10 @@ section .button button:hover{
   transition: opacity 0.4s ease;
 }
 
-/* Mostrar overlay ao passar o mouse */
 .project-image:hover .project-hover {
   opacity: 1;
 }
 
-/* Botões dentro do overlay */
 .project-hover a {
   background: #000;
   color: #fff;
@@ -878,23 +848,27 @@ section .button button:hover{
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: background 0.3s;}
+
+  .projects-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 1px; 
+  color: #6a027e;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
-/* Efeito hover nos botões */
 .project-hover a:hover {
   background: #fff;
   color: #000;
 }
 
-/* =========================
-   INFORMAÇÕES DO PROJETO
-========================= */
 .project-info {
   padding: 15px;
 }
 
-/* Tecnologias usadas no projeto */
 .project-tech {
   margin-top: 10px;
   display: flex;
@@ -906,15 +880,13 @@ section .button button:hover{
   background: #000;
   padding: 5px 10px;
   border-radius: 6px;
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   transition: transform 0.3s;
 }
 
-/* Efeito hover nas tags de tecnologia */
 .project-tech span:hover {
   transform: scale(1.1);
 }
-
 
 /* Footer */
 footer {
@@ -1051,6 +1023,220 @@ footer a:hover {
   }
 
   footer {
+    font-size: 0.7rem;
+  }
+}
+
+/* =============================
+   RESPONSIVIDADE PRINCIPAL
+=============================*/
+
+/* Tablets e celulares */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .links {
+    display: none; /* esconder links desktop */
+  }
+
+  .menu-icon {
+    display: block; /* mostrar menu mobile */
+  }
+
+  /* Hero / Main container */
+  .main-container {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .typewriter {
+    font-size: 1.4rem;
+  }
+
+  .image {
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  /* Skills */
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .skill-card {
+    padding: 15px;
+  }
+
+  .skill-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .skill-name span:last-child {
+    font-size: 0.8rem;
+  }
+
+  /* Projetos */
+  .projects-section {
+    padding: 80px 20px;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-info p {
+    font-size: 0.9rem;
+  }
+
+  .project-tech span {
+    font-size: 1rem;
+  }
+
+  /* Contato */
+  .contato {
+    padding: 40px 20px;
+  }
+
+  .form-contato input,
+  .form-contato textarea {
+    font-size: 0.9rem;
+  }
+
+  .form-contato button {
+    font-size: 0.9rem;
+  }
+
+  .info-contato {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.8rem;
+    padding: 20px 10px;
+  }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 480px) {
+
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .typewriter {
+    font-size: 1.1rem;
+  }
+
+  .image {
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+  }
+
+  .projects-section {
+    padding: 60px 10px;
+  }
+
+  .skill-card h3 {
+    font-size: 1rem;
+  }
+
+  .skill-name span:last-child {
+    font-size: 0.7rem;
+  }
+
+  .projects-container {
+    gap: 15px;
+  }
+
+  footer {
+    font-size: 0.7rem;
+  }
+}
+/* =============================
+   RESPONSIVIDADE HABILIDADES
+=============================*/
+@media (max-width: 768px) {
+  #habilidades {
+    padding: 550px 20px; /* espaço interno suficiente */
+    margin: 0 auto;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr; /* uma coluna só */
+    gap: 20px; /* espaço entre os cards */
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .skill-card {
+    padding: 15px; /* ajustar o padding interno */
+  }
+
+  .skill-card h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .skill-name span:first-child {
+    font-size: 0.9rem;
+  }
+
+  .skill-name span:last-child {
+    font-size: 0.8rem;
+  }
+
+  .skill-bar {
+    height: 10px;
+  }
+
+  .skill-progress {
+    height: 100%;
+  }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 480px) {
+  #habilidades {
+    padding: 40px 15px;
+  }
+
+  .skill-card h3 {
+    font-size: 1rem;
+  }
+
+  .skill-name span:first-child {
+    font-size: 0.8rem;
+  }
+
+  .skill-name span:last-child {
     font-size: 0.7rem;
   }
 }

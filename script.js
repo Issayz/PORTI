@@ -36,3 +36,13 @@ function typeWriter() {
 
 typeWriter();
 
+function scaleSite() {
+  const container = document.getElementById('scale-container');
+  let scale = window.innerWidth / 1200;
+  if (scale > 1) scale = 1;        // nunca aumenta além do tamanho real
+  if (scale < 0.7) scale = 0.7;    // nunca fica menor que 70%
+  container.style.transform = `scale(${scale})`;
+  container.style.width = `${1200 * scale}px`;
+}
+
+document.querySelector('.fa-code')
