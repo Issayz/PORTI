@@ -772,7 +772,7 @@ section .button button:hover{
 
 .projects-section {
   text-align: center;
-  padding: 100px 300px;
+  padding: 200px 100px;
   background: #000;
   color: #6a027e;
 }
@@ -894,127 +894,8 @@ footer a {
 footer a:hover {
   color: #ab5be9;
 }
-/* Responsividade geral */
-@media (max-width: 1200px) {
-  .main-container {
-    flex-wrap: wrap;
-    padding: 2rem;
-  }
 
-  .content {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .image {
-    margin-top: 50px;
-    width: 250px;
-    height: 250px;
-  }
-
-  .projects-section {
-    padding: 80px 50px;
-  }
-
-  .projects-container {
-    gap: 20px;
-  }
-
-  .skills-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-  }
-}
-
-/* Mobile: tablets e celulares */
-@media (max-width: 100px) {
-  .main-container {
-    flex-direction: column;
-    padding: 10rem;
-    gap: 10rem;
-  }
-
-  .image {
-    width: 50px;
-    height: 50px;
-    margin-top: 0px;
-  }
-
-  .content h1 {
-    font-size: 1.8rem;
-  }
-
-  .typewriter {
-    font-size: 1.2rem;
-  }
-
-  .links {
-    display: none; /* menu desktop escondido */
-  }
-
-  .menu-icon {
-    display: block; /* mostra menu mobile */
-  }
-
-  .dropdown {
-    width: 180px;
-    top: 9vh;
-    padding: 1rem;
-  }
-
-  .projects-section {
-    padding: 60px 20px;
-  }
-
-  .projects-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .skills-container {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  footer {
-    font-size: 0.75rem;
-    padding: 15px 10px;
-  }
-}
-
-/* Pequenos ajustes para celulares muito pequenos */
-@media (max-width: 480px) {
-  .content h1 {
-    font-size: 1.5rem;
-  }
-
-  .typewriter {
-    font-size: 1rem;
-  }
-
-  .main-container {
-    padding: 1rem;
-    gap: 1.5rem;
-  }
-
-  .image {
-    width: 150px;
-    height: 150px;
-    margin-top: 20px;
-  }
-
-  .projects-section {
-    padding: 50px 10px;
-  }
-
-  footer {
-    font-size: 0.7rem;
-  }
-}
-
-/* =============================
-   RESPONSIVIDADE PRINCIPAL
-=============================*/
+/* RESPONSIVIDADE */
 
 /* Tablets e celulares */
 @media (max-width: 768px) {
@@ -1084,7 +965,7 @@ footer a:hover {
 
   /* Projetos */
   .projects-section {
-    padding: 80px 20px;
+    padding: 80px 100px;
   }
 
   .projects-container {
@@ -1102,7 +983,7 @@ footer a:hover {
 
   /* Contato */
   .contato {
-    padding: 40px 20px;
+    padding: 160px 20px;
   }
 
   .form-contato input,
@@ -1127,47 +1008,7 @@ footer a:hover {
     padding: 20px 10px;
   }
 }
-
-/* Celulares muito pequenos */
-@media (max-width: 480px) {
-
-  .content h1 {
-    font-size: 1.5rem;
-  }
-
-  .typewriter {
-    font-size: 1.1rem;
-  }
-
-  .image {
-    width: 150px;
-    height: 150px;
-    margin-top: 20px;
-  }
-
-  .projects-section {
-    padding: 60px 10px;
-  }
-
-  .skill-card h3 {
-    font-size: 1rem;
-  }
-
-  .skill-name span:last-child {
-    font-size: 0.7rem;
-  }
-
-  .projects-container {
-    gap: 15px;
-  }
-
-  footer {
-    font-size: 0.7rem;
-  }
-}
-/* =============================
-   RESPONSIVIDADE HABILIDADES
-=============================*/
+  /*habilidades*/
 @media (max-width: 50px) {
   #habilidades {
     padding: 550px 50px; /* espaço interno suficiente */
