@@ -354,104 +354,24 @@ section .title {
 
 section .title span {
   color: #6a027e; 
- 
   font-size: 40px;
   position: relative;
   padding-bottom: 8px; 
 }
 
-section .title span::after{
-bottom: -7px;
-width: 70%;
-left: 50%;
-transform: translateX(-50%);
-}
-.about .about-details .left{
-width: 45%;
-}
-.about .left img{
- height: 400px;
- width: 400px;
- object-fit: cover;
- border-radius: 12px; 
-}
-.about-details .right{
- width: 55%; 
-}
-section .topic{
- color: #fff;
- font-size: 25px;
- font-weight: 500;
- margin-bottom: 10px; 
-}
-.about-details .right p{
- text-align: justify;
- color: #fff; 
-}
-section .button{
- margin: 16px 0;
-}
-section .button button{
- outline: none;
- padding: 8px 16px;
- border-radius: 4px;
- font-size: 25px;
- font-weight: 400;
- background: #6a027e;
- color: #ffffff;
- border: 2px solid transparent;
- cursor: pointer;
- transition: all 0.4s ease;
-}
-section .button button:hover{
- border-color: #6a027e;
- background-color: #fff;
- color: #6a027e;
-}
-
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 50px; /* ⬅ aumenta o espaço entre os quadros */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
 
 .skill-card {
-  background-color: var(--white);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
-
-  border-radius: 10px;
-  box-sizing: border-box;
+  padding: 80px;
   display: flex;
-
   gap: 10px;
 }
 
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
 
-.skill-card h3 {
-  color: var(--secondary-color);
-  margin-bottom: 25px;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  display: flex;
-  align-items: center;
-  gap: 5px; /* espaço entre ícone e texto */
-  font-size: 1.2rem;
-}
+
 
 .skill-card i {
-  font-size: 1rem;
+  font-size: 9rem;
   color: #6a027e;
   flex-shrink: 0; /* evita que encolha */
 }
@@ -520,19 +440,6 @@ section .button button:hover{
 }
 
 /* HABILIDADES */
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
-  margin-top: 10px;
-  width: 100%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  gap: 10px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 #habilidades .title {
   margin-top: -20px;   
   margin-bottom: 100px;
@@ -591,10 +498,14 @@ section .button button:hover{
 .skills-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 10px; /* ⬅ aumenta o espaço entre os quadros */
+  gap: 100px; /* ⬅ aumenta o espaço entre os quadros */
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  margin-top: 10px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Barra */
@@ -953,14 +864,6 @@ footer a:hover {
     margin: 0 auto;
   }
 
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 50px; /* ⬅ aumenta o espaço entre os quadros */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
 
   .skill-card {
