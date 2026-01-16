@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -7,26 +8,25 @@
 
 }
 
-body {
-  background-color: #000;
-  color: white;
-  overflow-x: hidden;
-}
-
+/* BASE */
 html {
   scroll-behavior: smooth;
 }
  
-#inicio {
-  scroll-margin-top: 80px;
+body {
+  background-color: #000;
+  color: white;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-
-
-#Início {
+/* INÍCIO */
+#inicio {
+  scroll-margin-top: 80px;
   min-height: 100vh; 
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -47,11 +47,12 @@ html {
   padding: 0 2rem;
 }
 
+/* APRESENTAÇÃO */
 main, .content, .principal, section:first-of-type {
   padding-top: 20vh; 
 }
 
-
+/* MENU */
 .nav-container {
   width: 100%;
   display: flex;
@@ -59,30 +60,32 @@ main, .content, .principal, section:first-of-type {
   align-items: center;
 }
 
-/* Logo */
+/* OCULTAR A BARRA */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* LOGO */
 .logo {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
   transition: 
-    transform 0.3s ease,
-    filter 0.3s ease;
+  transform 0.3s ease,
+  filter 0.3s ease;
   color: #6a027e;
   font-size: 2rem;
-  font-weight: 1000;
+  font-weight: 700;
 }
 
-/* efeito hover */
+/* EFEITO HOVER */
 .logo:hover {
-  transform: scale(1.25); /* pequeno zoom */
-  filter: brightness(1.2); /* clareia levemente */
-  color: #ab5be9
+  transform: scale(1.25); 
+  filter: brightness(1.2); 
+  color: #ab5be9;
 }
 
-
-
-
-/* Menu links */
+/* MENU LINKS */
 .links {
   display: flex;
   gap: 2rem;
@@ -116,7 +119,7 @@ main, .content, .principal, section:first-of-type {
 }
 
 
-/* Ícone do menu mobile */
+/* ICONE DO MENU MOBILE */
 .menu-icon {
   display: none;
   cursor: pointer;
@@ -124,7 +127,7 @@ main, .content, .principal, section:first-of-type {
   font-size: 1.8rem;
 }
 
-/* Dropdown menu mobile */
+/* DROPDOWN MENU MOBILE */
 .dropdown {
   display: none;
   flex-direction: column;
@@ -137,6 +140,8 @@ main, .content, .principal, section:first-of-type {
   padding: 1rem;
   box-shadow: 0 0 10px #6a027e;
   z-index: 9999;
+  width: 150px;
+  height: 35vh;
 }
 
 .dropdown a {
@@ -160,7 +165,7 @@ main, .content, .principal, section:first-of-type {
   color: #6a027e;
 }
 
-/* Mostrar menu hamburguer e esconder links desktop no mobile */
+/* MOSTRAR MENU HAMBURGUER E ESCONDER LINKS DESKTOP NO MOBILE */
 @media (max-width: 768px) {
   .links {
     display: none;
@@ -193,16 +198,13 @@ main, .content, .principal, section:first-of-type {
   box-shadow: 0 0 40px #6a027e;
   transition: transform 0.3s ease;
   flex-shrink: 0;
-  margin-top: 85px;
 }
 
 .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top; 
   display: block;
-  border-radius: 100%;
   transform: scale(1.1); 
   object-position: -200%;
 }
@@ -230,18 +232,11 @@ main, .content, .principal, section:first-of-type {
 
 
 /* TYPEWRITER com animação */
-
 .roxo {
   color: #6a027e;
   text-shadow: 0 0 10px #6a027e;
 }
 
-/* Cursor piscando */
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
 
 /* ÍCONES ALINHADOS EM LINHA, COM HOVER */
 .icons {
@@ -249,13 +244,6 @@ main, .content, .principal, section:first-of-type {
   gap: 1.5rem;
 }
 
-.social-icons a {
-  margin-right: 15px; 
-}
-
-.social-icons a:last-child {
-  margin-right: 0; 
-}
 
 /* ESTILO DOS ICONES */
 .social-links {
@@ -272,38 +260,31 @@ main, .content, .principal, section:first-of-type {
 }
 
 .social-links a:hover {
-  color: #ab5be9;
-;         
+  color: #ab5be9;         
   transform: translateY(-5px); 
 }
 
-
-
-/* Contato */
+/* CONTATO */
 #Contato {
   opacity: 0;
   transform: translateY(50px) rotate(-2deg);
   transition: opacity 1s ease, transform 1s ease;
 }
+
 #Contato.visible {
   opacity: 1;
   transform: translateY(0) rotate(0deg);
 }
 
-
+/* ESPAÇOS */
 .section {
-  height: 100vh; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-  box-sizing: border-box;
-  background-color: #000; 
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 80px 20px;
+  box-sizing: border-box;
+  background-color: #000; 
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -314,35 +295,7 @@ section.visible {
   transform: translateY(0);
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #000; 
-  color: #fff;
-}
-
-/* custom scrollbar */
-
-::-webkit-scrollbar {
-  width: 100px;
-}
-
-::-webkit-scrollbar-track {
-  background: #000; 
-}
-
-::-webkit-scrollbar-thumb {
-  background: #6a027e;  
-  border-radius: 12px;
-}
-
-/* Chrome, Edge, Safari */
-::-webkit-scrollbar {
-  display: none;
-}
-
-
+/* TÍTULO DA HABILIDADES */
 section .title {
   display: flex;
   justify-content: center;
@@ -352,197 +305,32 @@ section .title {
   margin-top: 90px; 
 }
 
-section .title span {
-  color: #6a027e; 
- 
-  font-size: 40px;
-  position: relative;
-  padding-bottom: 8px; 
-}
-
-section .title span::after{
-bottom: -7px;
-width: 70%;
-left: 50%;
-transform: translateX(-50%);
-}
-.about .about-details .left{
-width: 45%;
-}
-.about .left img{
- height: 400px;
- width: 400px;
- object-fit: cover;
- border-radius: 12px; 
-}
-.about-details .right{
- width: 55%; 
-}
-section .topic{
- color: #fff;
- font-size: 25px;
- font-weight: 500;
- margin-bottom: 10px; 
-}
-.about-details .right p{
- text-align: justify;
- color: #fff; 
-}
-section .button{
- margin: 16px 0;
-}
-section .button button{
- outline: none;
- padding: 8px 16px;
- border-radius: 4px;
- font-size: 25px;
- font-weight: 400;
- background: #6a027e;
- color: #ffffff;
- border: 2px solid transparent;
- cursor: pointer;
- transition: all 0.4s ease;
-}
-section .button button:hover{
- border-color: #6a027e;
- background-color: #fff;
- color: #6a027e;
-}
-
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 50px; /* ⬅ aumenta o espaço entre os quadros */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-
+/*HABILIDADES */
 .skill-card {
   background-color: var(--white);
   padding: 30px;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
   transition: var(--transition);
-
   border-radius: 10px;
   box-sizing: border-box;
   display: flex;
-
   gap: 10px;
-}
-
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-
-.skill-card h3 {
-  color: var(--secondary-color);
-  margin-bottom: 25px;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  display: flex;
-  align-items: center;
-  gap: 5px; /* espaço entre ícone e texto */
-  font-size: 1.2rem;
-}
-
-.skill-card i {
-  font-size: 1rem;
-  color: #6a027e;
-  flex-shrink: 0; /* evita que encolha */
-}
-
-
-
-.skill-card h3 i {
-  color: var(--primary-color);
-  margin-right: 10px;
-  font-size: 1.2rem;
-}
-
-.skill-item {
-  margin-bottom: 20px;
 }
 
 .skill-name {
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
-  justify-content: space-between; /* separa o nome da skill da % */
   align-items: center;
   font-size: 0.9rem;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   flex-wrap: wrap; /* evita que quebre de forma feia em telas pequenas */
-}
-
-
-
-.skill-name span:first-child {
-  font-weight: 600;
-}
-
-.skill-name span:last-child {
-  color: var(--text-light);
-  font-size: 0.9rem;
-}
-
-.skill-bar {
-  height: 10px;
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  overflow: hidden;
-  width: 100%;
-  height: 10px;
-  background: #333;
-  overflow: hidden;
-}
-
-.skill-progress {
-  height: 100%;
-  width: 0; /* animar depois com JS ou CSS */
-  background: linear-gradient(90deg,#6a027e,#a000ff);
-  border-radius: 5px;
-  transition: width 1s ease-in-out;
-}
-
-
-
-.skill-progress {
-  height: 100%;
-  background: linear-gradient(90deg, var(--primary-color), #5dade2);
-  border-radius: 5px;
-  width: 0;
-  transition: width 1.5s ease-out;
-}
-
-/* HABILIDADES */
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
-  margin-top: 10px;
-  width: 100%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  gap: 10px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 #habilidades .title {
   margin-top: -20px;   
   margin-bottom: 100px;
-}
-
-#habilidades .title span {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 0;     
-  letter-spacing: 3px;  
 }
 
 .skill-card {
@@ -558,36 +346,12 @@ section .button button:hover{
   box-shadow: 0 0 25px rgba(106,2,126,0.6);
 }
 
-.skill-card h3 {
-  color: #fff;
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
 
 .skill-card i {
   color: #6a027e !important;
   font-size: 1.5rem;
 }
 
-
-.skill-bar {
-  height: 10px;
-  background-color: #000;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.skill-progress {
-  height: 100%;
-  background: linear-gradient(90deg, #6a027e, #b84cff);
-  border-radius: 5px;
-  width: 0;
-  transition: width 1.5s ease-out;
-
-}/* SKILLS */
 .skills-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
