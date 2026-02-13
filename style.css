@@ -247,11 +247,11 @@ main, .content, .principal, section:first-of-type {
 /* ================= SOBRE MIM ================= */
 
 .section {
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 20px;
+  padding: 40px 20px;
   box-sizing: border-box;
   background-color: #000; 
   opacity: 0;
