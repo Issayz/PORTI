@@ -21,6 +21,8 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+
+
 /* OCULTAR A BARRA */
 ::-webkit-scrollbar {
   display: none;
@@ -258,7 +260,10 @@ section .title {
 #habilidades .title {
   margin-top: -20px;   
   margin-bottom: 100px;
-  
+}
+
+#habilidades {
+  scroll-margin-top: 100px;
 }
 
 .skill-card {
@@ -278,7 +283,7 @@ section .title {
 }
 
 .skill-card .skill-item:first-of-type {
-  margin-top: 60px; /* aumenta esse valor se quiser mais pra baixo */
+  margin-top: 60px; 
 }
 
 .skill-name {
@@ -408,6 +413,8 @@ section .title {
   backdrop-filter: blur(3px);
 }
 
+
+
 .project-image:hover .project-hover {
   opacity: 1;
 }
@@ -468,6 +475,10 @@ section .title {
 #Contato.visible {
   opacity: 1;
   transform: translateY(0) rotate(0deg);
+}
+
+#contato {
+  scroll-margin-top: 100px;
 }
 
 .contato {
