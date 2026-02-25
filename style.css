@@ -22,7 +22,6 @@ body {
 }
 
 
-
 /* OCULTAR A BARRA */
 ::-webkit-scrollbar {
   display: none;
@@ -263,7 +262,7 @@ section .title {
 }
 
 #habilidades {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 150px;
 }
 
 .skill-card {
