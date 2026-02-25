@@ -251,19 +251,15 @@ section .title {
   display: flex;
   justify-content: center;
   font-size: 2.5rem;
-  margin-bottom: 60px;
+  margin-bottom: 90px;
   color: #6a027e; 
-  margin-top: 90px; 
+  margin-top: 150px; 
+  scroll-margin-top: 1000px;
 }
 
-#habilidades .title {
-  margin-top: -20px;   
-  margin-bottom: 100px;
-}
 
-#habilidades {
-  scroll-margin-top: 150px;
-}
+
+  
 
 .skill-card {
   background-color: #fff;
@@ -316,7 +312,7 @@ section .title {
 .skills-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 10px;
+  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -337,6 +333,8 @@ section .title {
   border-radius: 5px;
   animation: fill 1s ease-out forwards;
 }
+
+
 
 @keyframes fill {
   to {
