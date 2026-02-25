@@ -268,6 +268,7 @@ section .title {
   box-sizing: border-box;
   display: flex;
   gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   aspect-ratio: 1 / 1;
   flex-direction: column;
   flex-direction: column;
@@ -310,7 +311,7 @@ section .title {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 80px;
-  max-width: 1200px;
+  max-width: 1750px;
   margin: 0 auto;
   padding: 0 20px;
 }
