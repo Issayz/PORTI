@@ -258,9 +258,6 @@ section .title {
 }
 
 
-
-  
-
 .skill-card {
   background-color: #fff;
   padding: 30px;
@@ -355,8 +352,9 @@ section .title {
   font-weight: 400;
   letter-spacing: 1px; 
   color: #6a027e;
-  margin-bottom: 50px;
+  margin-bottom: 90px;
   text-align: center;
+  margin-top: 150px; 
 }
 
 .projects-container {
