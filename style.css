@@ -275,7 +275,7 @@ section .title {
 }
 
 .skill-card .skill-item:first-of-type {
-  margin-top: 60px; 
+  margin-top: 80px; 
 }
 
 .skill-name {
@@ -317,11 +317,13 @@ section .title {
 }
 
 .skill-bar {
-  height: 10px;
+  height: 15px;
+  width: 100%;
   background: #333;
   border-radius: 5px;
   overflow: hidden;
   margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 .skill-progress {
@@ -331,8 +333,6 @@ section .title {
   border-radius: 5px;
   animation: fill 1s ease-out forwards;
 }
-
-
 
 @keyframes fill {
   to {
