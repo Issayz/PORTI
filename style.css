@@ -343,7 +343,7 @@ section .title {
 
 @keyframes fill {
   to {
-    width: 80%;
+    width: var(--target);
   }
 }
 
