@@ -17,8 +17,10 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  font-family: "Bebas Neue", sans-serif;
-
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* OCULTAR A BARRA */
