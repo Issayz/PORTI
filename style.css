@@ -21,6 +21,26 @@ body {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
+  background: #000;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(
+    200px circle at var(--x) var(--y),
+    rgba(184, 76, 255, 0.25),
+    transparent 27%
+  );
+  transition: background 0.1s ease;
+  z-index: 0;
 }
 
 /* OCULTAR A BARRA */
@@ -720,26 +740,3 @@ footer a:hover {
   }
 }
 
-body {
-  background: #000;
-  position: relative;
-  overflow-x: hidden;
-  
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background: radial-gradient(
-    200px circle at var(--x) var(--y),
-    rgba(184, 76, 255, 0.25),
-    transparent 27%
-  );
-  transition: background 0.1s ease;
-  z-index: 0;
-}
